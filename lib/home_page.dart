@@ -55,6 +55,8 @@ class HomePageState extends State<HomePage> {
                       bottomNavigationBar: BottomNavigationBar(
                         type: BottomNavigationBarType.fixed,
                         currentIndex: _currentIndex,
+                        selectedFontSize: 16,
+                        unselectedFontSize: 14,
                         backgroundColor: const Color.fromRGBO(30, 30, 30, 1),
                         selectedItemColor: const Color.fromRGBO(197, 226, 220, 1),
                         unselectedItemColor: const Color.fromRGBO(103, 103, 103, 1),
