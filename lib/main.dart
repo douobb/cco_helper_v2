@@ -1,3 +1,4 @@
+import 'package:cco_helper_v2/home_page.dart';
 import 'package:flutter/material.dart';
 import 'splash_screen.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         fontFamily: "GenSenRounded",
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: const HomePage(),
     );
   }
 }

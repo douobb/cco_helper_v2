@@ -7,10 +7,10 @@ import 'secret_data.dart';
 class Tool extends StatelessWidget {
   Tool({super.key});
   final List<Tab> myTabs = <Tab>[
-    const Tab(child:Text('黑市試算',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
-    const Tab(child:Text('紅包進度',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
-    const Tab(child:Text('搜索地區',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
-    const Tab(child:Text('機密資料',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
+    const Tab(child:Text('黑市試算',style: TextStyle(fontSize: 16,fontFamily: "GenSenRounded"))),
+    const Tab(child:Text('紅包進度',style: TextStyle(fontSize: 16,fontFamily: "GenSenRounded"))),
+    const Tab(child:Text('搜索地區',style: TextStyle(fontSize: 16,fontFamily: "GenSenRounded"))),
+    const Tab(child:Text('機密資料',style: TextStyle(fontSize: 16,fontFamily: "GenSenRounded"))),
   ];
 
   final pages = [const BlackMarket(),const ASU(), const SearchPlace(), const SecretData()];
