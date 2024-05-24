@@ -5,8 +5,8 @@ import 'download.dart';
 class Other extends StatelessWidget {
   Other({super.key});
   final List<Tab> myTabs = <Tab>[
-    const Tab(child:Text('工具&教學',style: TextStyle(fontSize: 16,fontFamily: "GenSenRounded"))),
-    const Tab(child:Text('遊戲下載',style: TextStyle(fontSize: 16,fontFamily: "GenSenRounded"))),
+    const Tab(child:Text('工具&教學',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
+    const Tab(child:Text('遊戲下載',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
   ];
 
   final pages = [Link(), Download()];

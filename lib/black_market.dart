@@ -46,7 +46,7 @@ class MyWidgetState extends State<BlackMarket> {
                   const SizedBox(height: 10),
                   Row(
                     children: [
-                      const Text("BTC(%)",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
+                      const Text("BTC",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
                       const SizedBox(width: 10),
                       Expanded(
                         child: TextField(
@@ -73,7 +73,7 @@ class MyWidgetState extends State<BlackMarket> {
                         ),
                       ),
                       const SizedBox(width: 20),
-                      const Text("討價(%)",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
+                      const Text("討價",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
                       const SizedBox(width: 10),
                       Expanded(
                         child: TextField(
@@ -95,7 +95,7 @@ class MyWidgetState extends State<BlackMarket> {
                         ),
                       ),
                       const SizedBox(width: 20),
-                      const Text("經驗(%)",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
+                      const Text("經驗",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
                       const SizedBox(width: 10),
                       Expanded(
                         child:TextField(
@@ -121,7 +121,7 @@ class MyWidgetState extends State<BlackMarket> {
                   const SizedBox(height: 20),
                   Row(
                     children: [
-                      const Text("分子列印等級",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
+                      const Text("列印等級",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
                       const SizedBox(width: 10),
                       Expanded(
                         child: TextField(
@@ -314,23 +314,23 @@ class MyWidgetState extends State<BlackMarket> {
                                   children: [
                                     Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                                      child: const Text('快取類別',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
+                                      child: const Text('類別',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
                                     ),
                                     Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                                      child: const Text('灰 (廢棄)',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
+                                      child: const Text('灰',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
                                     ),
                                     Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                                      child: const Text('白 (普通)',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
+                                      child: const Text('白',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
                                     ),
                                     Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                                      child: const Text('綠 (高級)',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
+                                      child: const Text('綠',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
                                     ),
                                     Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                                      child: const Text('黃 (稀有)',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
+                                      child: const Text('黃',style: TextStyle(fontSize: 16,color: Color.fromRGBO(197, 226, 220, 1),fontFamily: "GenSenRounded")),
                                     ),
                                   ],
                                 ),
