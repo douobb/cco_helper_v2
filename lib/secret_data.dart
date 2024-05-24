@@ -54,7 +54,6 @@ class MyWidgetState extends State<SecretData> {
                         child:TextField(
                           cursorColor:const Color.fromRGBO(197, 226, 220, 1),
                           controller: controllerPassword,
-                          keyboardType: TextInputType.number,
                           style: const TextStyle(fontSize: 18, color: Color.fromRGBO(197, 226, 220, 1),),
                           decoration: const InputDecoration(
                             counterText: '',
