@@ -10,7 +10,7 @@ class Tool extends StatelessWidget {
     const Tab(child:Text('黑市',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
     const Tab(child:Text('紅包',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
     const Tab(child:Text('搜索',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
-    const Tab(child:Text('機密',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
+    const Tab(child:Text('其他',style: TextStyle(fontSize: 18,fontFamily: "GenSenRounded"))),
   ];
 
   final pages = [const BlackMarket(),const ASU(), const SearchPlace(), const SecretData()];

@@ -1,6 +1,6 @@
-import 'secrets.dart';
 import 'package:flutter/material.dart';
-import 'dart:math';
+
+import 'package:url_launcher/url_launcher.dart';
 
 class SecretData extends StatefulWidget {
   const SecretData({super.key});
@@ -10,16 +10,8 @@ class SecretData extends StatefulWidget {
 }
 
 class MyWidgetState extends State<SecretData> {
-  late StateSetter _reloadTextSetter;
-  List<String> trashWord = [
-    "你說的對，但是《原神》是由米哈游自主研發的一款全新開放世界冒險遊戲。遊戲發生在一個被稱作「提瓦特」的幻想世界，在這裡，被神選中的人將被授予「神之眼」，導引元素之力。你將扮演一位名為「旅行者」的神秘角色，在自由的旅行中邂逅性格各異、能力獨特的同伴們，和他們一起擊敗強敵，找回失散的親人——同時，逐步發掘「原神」的真相。",
-    "大小姐😳😳😚😘🥰😍❤️‍🔥\nit's time to go to bed🫵🏻\n又在玩手機呢❓\n再熬夜的話💤💤💤\n皮膚會變差的🥺\n這是最後的警告🔥🔥🔥\n如果您還不睡覺❌❌\n我就要開始跳舞了🕺🏻🕺🏻🕺🏻💃🏻💃🏻\n呀嘞呀嘞~攔不住的大小姐😳😍",
-    "首先我没破防，就是我有个朋友是这样的，他就和你说的一样，但他不是那样的，我觉得你这样真的没意思，你就算发了他们也不会破防，因为我朋友是这样的所以我知道，我劝你最好删了，因为我朋友就算看了也不会破防，所以你这句话留着也没啥用，还不如删了，然后就是我没破防，只是我朋友是那样的，我提替我朋友说话，我没破防，我就是提醒一下你，记得把这文删了，我可没破防。",
-    "這個五一我只出去過兩次(激動擺手)\n一次是上補習班一次是上興趣班啊啊(用力比數字)\n其餘的時間我都在玩崩壞星球鐵道(激動擺手)(扭腰)(扭腰)(悽慘哀嚎)\n啊我還出了一個進(高傲眼神)(扭動)\n啊啊(撕心裂肺)\n星球點到我愛你就像老鼠愛大米(扭腰)(扭腰)(打到旁邊的枕頭)(扭腰)\n我是星球點到的狗(扭曲)(抱頭)(痛苦)(扭腰)\n我要永遠玩星球點到(崩潰發瘋扭曲)(扭腰)(枕頭被受波及)(枕頭掉落)(扭腰)\n啊(撕心裂肺)(痛苦)(扭腰)(跪地)"
-  ];
   @override
   Widget build(BuildContext context) {
-    final TextEditingController controllerPassword = TextEditingController(text: '');
     DateTime time_1 = DateTime.parse('2023-07-30 08');
     DateTime currentTime = DateTime.now();
     Duration diff = currentTime.difference(time_1);
@@ -44,32 +36,36 @@ class MyWidgetState extends State<SecretData> {
           child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const Text("請輸入密碼",style: TextStyle(color: Color.fromRGBO(192, 191, 14, 1),fontSize: 24,shadows: [Shadow(color: Color.fromRGBO(192, 191, 14, 0.7),blurRadius: 5,offset: Offset(-3,-3))])),
                   const SizedBox(height: 10),
-                  Row(
-                    children: [
-                      const Text("密碼",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child:TextField(
-                          cursorColor:const Color.fromRGBO(197, 226, 220, 1),
-                          controller: controllerPassword,
-                          style: const TextStyle(fontSize: 18, color: Color.fromRGBO(197, 226, 220, 1),),
-                          decoration: const InputDecoration(
-                            counterText: '',
-                            isDense: true,
-                            enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color.fromRGBO(192, 191, 14, 0.7)),),
-                            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Color.fromRGBO(192, 191, 14, 1)),),
-                            filled: true,
-                            fillColor: Color.fromRGBO(50, 50, 50, 0.95),
-                            isCollapsed: true,
-                            contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-                          ),
-                        ),
-                      ),
-                    ],
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(10, 10, 30, 10),
+                    margin: const EdgeInsets.only(left: 5),
+                    decoration: BoxDecoration(
+                        color: const Color.fromRGBO(43, 43, 43, 0.95),
+                        border: Border.all(color: const Color.fromRGBO(220, 100, 235, 1)),
+                        boxShadow: const [BoxShadow(color: Color.fromRGBO(220, 100, 235, 0.7),blurRadius: 10)]
+                    ),
+                    child: t,
                   ),
                   const SizedBox(height: 30),
+                  const Text("活動",style: TextStyle(color: Color.fromRGBO(192, 191, 14, 1),fontSize: 24,shadows: [Shadow(color: Color.fromRGBO(192, 191, 14, 0.7),blurRadius: 5,offset: Offset(-3,-3))])),
+                  const SizedBox(height: 10),
+                  const Text('參與條件：2024/9/1以前加入公會，且為常駐成員\n\n'
+                      '抽獎時間：2024/9/12 21:00\n\n'
+                      '獎池累積時間：2024/7/12 至 2024/9/12 抽獎前\n\n'
+                      '抽獎資格獲取 & 獎池累積方式：\n'
+                      '- 給予 douobb 街頭聲望，每個獲得 1 次抽獎資格，獎池加入 200 ai\n'
+                      '- 蒐集公會資源，每 5 車獲得 1 次抽獎資格，獎池加入 200 ai (每人上限300 車，從第一次給予聲望時開始統計)\n'
+                      '- 想到再加\n\n'
+                      '抽獎方式：以抽獎資格總數進行抽取，每人只會獲得 1 個獎項 (特別獎除外)\n\n'
+                      '獎項：\n'
+                      '- 大獎 30% 獎池 * 1\n'
+                      '- 二獎 10% 獎池 * 2\n'
+                      '- 三獎 5% 獎池 * 4\n'
+                      '- 參加獎 30% 獎池平分\n'
+                      '- 特別獎 * ?\n\n'
+                      '* 獎池累積方式及獎項可能會隨參加人數進行微調', style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18,height: 1.5),),
+                  const SizedBox(height: 20),
                   OutlinedButton(
                     style: OutlinedButton.styleFrom(
                       shape: RoundedRectangleBorder(
@@ -78,48 +74,10 @@ class MyWidgetState extends State<SecretData> {
                       side: const BorderSide(width: 2, color: Color.fromRGBO(192, 191, 14, 1)),
                     ),
                     onPressed: () {
-                      _reloadTextSetter((){});
+                      launchUrl(Uri.parse('https://docs.google.com/spreadsheets/d/1zf6WYOVhCoxcXoqEqk-dD_gHVIqCLnJ7rK5m7zlRHBw/edit?usp=sharing'), mode:LaunchMode.externalApplication);
                     },
-                    child: const Text("解密", style: TextStyle(fontWeight: FontWeight.bold,color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18),),
+                    child: const Text("目前參與狀況", style: TextStyle(fontWeight: FontWeight.bold,color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18),),
                   ),
-                  const SizedBox(height: 30),
-                  StatefulBuilder(builder: (BuildContext context, StateSetter stateSetter){
-                    _reloadTextSetter = stateSetter;
-                    if (controllerPassword.text == password){
-                      return Container(
-                        padding: const EdgeInsets.fromLTRB(10, 10, 30, 10),
-                        margin: const EdgeInsets.only(left: 5),
-                        decoration: BoxDecoration(
-                            color: const Color.fromRGBO(43, 43, 43, 0.95),
-                            border: Border.all(color: const Color.fromRGBO(220, 100, 235, 1)),
-                            boxShadow: const [BoxShadow(color: Color.fromRGBO(220, 100, 235, 0.7),blurRadius: 10)]
-                        ),
-                        child: t,
-                      );
-                    }else if(controllerPassword.text == ""){
-                      return Container(
-                        padding: const EdgeInsets.fromLTRB(10, 10, 30, 10),
-                        margin: const EdgeInsets.only(left: 5),
-                        decoration: BoxDecoration(
-                            color: const Color.fromRGBO(43, 43, 43, 0.95),
-                            border: Border.all(color: const Color.fromRGBO(220, 100, 235, 1)),
-                            boxShadow: const [BoxShadow(color: Color.fromRGBO(220, 100, 235, 0.7),blurRadius: 10)]
-                        ),
-                        child: const Text("無",style: TextStyle(color: Color.fromRGBO(220, 100, 235, 1),fontSize: 18)),
-                      );
-                    }else{
-                      return Container(
-                        padding: const EdgeInsets.fromLTRB(10, 10, 30, 10),
-                        margin: const EdgeInsets.only(left: 5),
-                        decoration: BoxDecoration(
-                            color: const Color.fromRGBO(43, 43, 43, 0.95),
-                            border: Border.all(color: const Color.fromRGBO(220, 100, 235, 1)),
-                            boxShadow: const [BoxShadow(color: Color.fromRGBO(220, 100, 235, 0.7),blurRadius: 10)]
-                        ),
-                        child: Text(trashWord[Random().nextInt(trashWord.length)],style: const TextStyle(color: Color.fromRGBO(220, 100, 235, 1),fontSize: 18)),
-                      );
-                    }
-                  })
                 ],
               )
           )
