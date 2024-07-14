@@ -62,9 +62,9 @@ class MyWidgetState extends State<SecretData> {
                       '- 三獎 10 嘻嘻 * 4\n'
                       '- 參加獎 3 嘻嘻\n'
                       '- 特別獎 * ?\n\n'
-                      'Bonus：'
+                      'Bonus：\n'
                       '額外的 100 嘻嘻獎池\n'
-                      '根據參加者從按下聲望至 2024/9/12 前蒐集的公會資源量進行分配 (低標 2000資源)'
+                      '根據參加者從按下聲望至 2024/9/12 前蒐集的公會資源量進行分配 (低標 2000資源)\n'
                       '* 獎池累積方式及獎項可能會隨參加人數進行微調', style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18,height: 1.5),),
                   const SizedBox(height: 20),
                   OutlinedButton(
