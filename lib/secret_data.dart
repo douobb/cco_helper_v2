@@ -12,7 +12,7 @@ class SecretData extends StatefulWidget {
 class MyWidgetState extends State<SecretData> {
   @override
   Widget build(BuildContext context) {
-    DateTime time_1 = DateTime.parse('2023-07-30 08');
+    DateTime time_1 = DateTime.parse('2024-07-21 08');
     DateTime currentTime = DateTime.now();
     Duration diff = currentTime.difference(time_1);
     int diffDate = diff.inDays-diff.inDays%28;
