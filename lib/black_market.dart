@@ -24,7 +24,7 @@ class MyWidgetState extends State<BlackMarket> {
     final TextEditingController controllerBTCBuff = TextEditingController(text: '100');
     final TextEditingController controllerBargain = TextEditingController(text: '40');
     final TextEditingController controllerExpBuff = TextEditingController(text: '80');
-    final TextEditingController controllerAIPrice = TextEditingController(text: '4400');
+    final TextEditingController controllerAIPrice = TextEditingController(text: '4800');
     final TextEditingController controllerCacheGrey = TextEditingController(text: '8');
     final TextEditingController controllerCacheWhite = TextEditingController(text: '7');
     final TextEditingController controllerCacheGreen = TextEditingController(text: '4');
@@ -166,6 +166,32 @@ class MyWidgetState extends State<BlackMarket> {
                       )
                     ],
                   ),
+                  const SizedBox(height: 20),
+                  Row(
+                    children: [
+                      const Text("AI價格 (BTC)",style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18)),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: TextField(
+                          cursorColor: const Color.fromRGBO(197, 226, 220, 1),
+                          controller: controllerAIPrice,
+                          keyboardType: TextInputType.number,
+                          inputFormatters: <TextInputFormatter>[FilteringTextInputFormatter.digitsOnly],
+                          style: const TextStyle(fontSize: 18, color: Color.fromRGBO(197, 226, 220, 1),),
+                          decoration: const InputDecoration(
+                            counterText: '',
+                            isDense: true,
+                            enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Color.fromRGBO(192, 191, 14, 0.7)),),
+                            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Color.fromRGBO(192, 191, 14, 1)),),
+                            filled: true,
+                            fillColor: Color.fromRGBO(50, 50, 50, 0.95),
+                            isCollapsed: true,
+                            contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                   const SizedBox(height: 10),
                   const Text("請輸入快取價格 (快取：AI)",style: TextStyle(color: Color.fromRGBO(192, 191, 14, 1),fontSize: 24,shadows: [Shadow(color: Color.fromRGBO(192, 191, 14, 0.7),blurRadius: 5,offset: Offset(-3,-3))])),
                   const SizedBox(height: 10),
@@ -278,7 +304,7 @@ class MyWidgetState extends State<BlackMarket> {
                       if(controllerBTCBuff.text=='') controllerBTCBuff.text = '100';
                       if(controllerBargain.text=='') controllerBargain.text = '40';
                       if(controllerExpBuff.text=='') controllerExpBuff.text = '80';
-                      if(controllerAIPrice.text=='') controllerAIPrice.text = '4400';
+                      if(controllerAIPrice.text=='') controllerAIPrice.text = '4800';
                       if(controllerCacheGrey.text=='') controllerCacheGrey.text = '8';
                       if(controllerCacheWhite.text=='') controllerCacheWhite.text = '7';
                       if(controllerCacheGreen.text=='') controllerCacheGreen.text = '4';
