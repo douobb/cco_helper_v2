@@ -14,6 +14,14 @@ class Link extends StatelessWidget {
       ),
     ),
     ListTile(
+      title: const Text('公會裝備租借', style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18),),
+      leading: const Icon(Icons.build, color: Color.fromRGBO(103, 103, 103, 1),),
+      trailing: InkWell(
+        child: const Icon(Icons.arrow_forward, color: Color.fromRGBO(197, 226, 220, 1)),
+        onTap: (){launchUrl(Uri.parse('https://docs.google.com/spreadsheets/d/1axZMewZiYB2uZ5nv1qirKOoMzaI6-4CltLeY33OcjwM/edit?usp=sharing'), mode:LaunchMode.externalApplication);},
+      ),
+    ),
+    ListTile(
       title: const Text('CCO教學-新手入門', style: TextStyle(color: Color.fromRGBO(197, 226, 220, 1),fontSize: 18),),
       leading: const Icon(Icons.book, color: Color.fromRGBO(103, 103, 103, 1),),
       trailing: InkWell(
