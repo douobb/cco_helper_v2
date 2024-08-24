@@ -58,7 +58,7 @@ class Link extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             border: Border(
                 right: BorderSide(
                     color: Color.fromRGBO(30, 30, 30, 1),
@@ -72,7 +72,7 @@ class Link extends StatelessWidget {
         ),
         width: 800,
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: ListView(
             children: list,
           ),
