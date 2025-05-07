@@ -63,9 +63,9 @@ class MyWidgetState extends State<SearchPlace> {
   Widget build(BuildContext context) {
     final TextEditingController controllerTimes = TextEditingController(text: '10');
     final TextEditingController controllerLevel = TextEditingController(text: '1');
-    final TextEditingController controllerValueOfMtp = TextEditingController(text: '90');
-    final TextEditingController controllerValueOfAtp = TextEditingController(text: '140');
-    final TextEditingController controllerValueOfMatp = TextEditingController(text: '140');
+    final TextEditingController controllerValueOfMtp = TextEditingController(text: '60');
+    final TextEditingController controllerValueOfAtp = TextEditingController(text: '135');
+    final TextEditingController controllerValueOfMatp = TextEditingController(text: '130');
     return Container(
       decoration: const BoxDecoration(
           border: Border(
@@ -221,9 +221,9 @@ class MyWidgetState extends State<SearchPlace> {
                     onPressed: () {
                       if(controllerTimes.text=='') controllerTimes.text = '10';
                       if(controllerLevel.text=='') controllerLevel.text = '1';
-                      if(controllerValueOfMtp.text=='') controllerValueOfMtp.text = '90';
-                      if(controllerValueOfAtp.text=='') controllerValueOfAtp.text = '120';
-                      if(controllerValueOfMatp.text=='') controllerValueOfMatp.text = '120';
+                      if(controllerValueOfMtp.text=='') controllerValueOfMtp.text = '60';
+                      if(controllerValueOfAtp.text=='') controllerValueOfAtp.text = '135';
+                      if(controllerValueOfMatp.text=='') controllerValueOfMatp.text = '130';
                       double ts = 0;
                       tsCount = redBag - ts.floor();
                       percentOfRedBag = ts * 100 / redBag;

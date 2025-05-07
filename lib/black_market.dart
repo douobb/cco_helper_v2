@@ -24,7 +24,7 @@ class MyWidgetState extends State<BlackMarket> {
     final TextEditingController controllerBTCBuff = TextEditingController(text: '100');
     final TextEditingController controllerBargain = TextEditingController(text: '40');
     final TextEditingController controllerExpBuff = TextEditingController(text: '80');
-    final TextEditingController controllerAIPrice = TextEditingController(text: '4800');
+    final TextEditingController controllerAIPrice = TextEditingController(text: '7900');
     final TextEditingController controllerCacheGrey = TextEditingController(text: '8');
     final TextEditingController controllerCacheWhite = TextEditingController(text: '7');
     final TextEditingController controllerCacheGreen = TextEditingController(text: '4');
@@ -304,7 +304,7 @@ class MyWidgetState extends State<BlackMarket> {
                       if(controllerBTCBuff.text=='') controllerBTCBuff.text = '100';
                       if(controllerBargain.text=='') controllerBargain.text = '40';
                       if(controllerExpBuff.text=='') controllerExpBuff.text = '80';
-                      if(controllerAIPrice.text=='') controllerAIPrice.text = '4800';
+                      if(controllerAIPrice.text=='') controllerAIPrice.text = '7900';
                       if(controllerCacheGrey.text=='') controllerCacheGrey.text = '8';
                       if(controllerCacheWhite.text=='') controllerCacheWhite.text = '7';
                       if(controllerCacheGreen.text=='') controllerCacheGreen.text = '4';
